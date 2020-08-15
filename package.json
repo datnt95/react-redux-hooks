@@ -1,0 +1,29 @@
+{
+    "name": "react-redux-hooks",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,jsx,ts,css}\"",
+        "format:check": "prettier --ignore-path ./.gitignore --check \"./**/*.{html,json,js,jsx,ts,css}\"",
+        "lint": "eslint --ignore-path ./.gitignore --fix \"./**/*.{js,ts}\"",
+        "lint:check": "eslint --ignore-path ./.gitignore --quiet \"./**/*.{js,ts}\""
+    },
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "dotenv-expand": "^5.1.0",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-redux": "^7.2.1",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "3.4.3",
+        "redux": "^4.0.5",
+        "redux-devtools-extension": "^2.13.8",
+        "redux-thunk": "^2.3.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.6.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-import": "^2.22.0",
+        "prettier": "^2.0.5"
+    }
+}
