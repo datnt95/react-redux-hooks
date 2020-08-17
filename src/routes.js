@@ -13,8 +13,8 @@ const pages = [
     {
         component: Staff,
         path: "/staff",
-        layout: MainLayout,
-    },
+        layout: MainLayout
+    }
 ];
 
 const Routes = () => {
@@ -25,13 +25,7 @@ const Routes = () => {
                 return (
                     <PrivateRoute component={component} key={path} path={path}>
                         {(matchProps) => {
-                            return (
-                                <RouteWithLayout
-                                    layout={layout}
-                                    component={component}
-                                    {...matchProps}
-                                />
-                            );
+                            return <RouteWithLayout layout={layout} component={component} {...matchProps} />;
                         }}
                     </PrivateRoute>
                 );
