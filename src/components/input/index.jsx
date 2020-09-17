@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     },
     errorText: {
         color: theme.colors.red,
-        fontSize: 13,
+        fontSize: 12,
         position: "absolute",
         top: 4,
         right: 0
@@ -32,17 +32,17 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function Input({ width, ...rest }) {
+export default function Input({ label, width, errorText, error, ...rest }) {
     const classes = useStyles({ width });
     return (
         <FormControl className={classes.root}>
-            {rest.label && (
+            {label && (
                 <Typography className={`${classes.label}`} variant="body2">
-                    {rest.label}
+                    {label}
                 </Typography>
             )}
             <InputBaseCustomize {...rest} />
-            {rest.error && <div className={classes.errorText}>{rest.errorText || "error"}</div>}
+            {error && <div className={classes.errorText}>{errorText || "error"}</div>}
         </FormControl>
     );
 }
